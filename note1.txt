@@ -1,0 +1,314 @@
+Hi, I am Santosh, I belongs to Kukanoor in Karnataka. 
+I completed my postgraduate course, Master of Computer Application (MCA), at VTU University, graduated in 2015.
+I was selected as a Software Trainee at Aliment Software Ltd., where I worked for over 2 years.
+
+During my tenure, I had the opportunity to work on various technologies such as ASP.NET, C#, and SQL. 
+I also provided support for existing VB.Net applications. 
+Subsequently, in 2018, I joined HGS Company and have been working there for more than 5 years.
+
+At HGS, I have worked on a diverse range of technologies, including ASP.NET, C#, SQL, MVC, and ASP.NET Core. 
+Additionally, I have continued to offer support for existing VB.Net applications. 
+After spending over 5 years with the same company, I am now seeking new challenges and opportunities.
+
+That's a brief overview of my professional journey.
+
+******** 1)Difference between System.datetime and System.Datetime.Now in C#?
+System.datetime										|	System.Datetime.Now
+----------------------------------------------------|--------------------------------------------------------------
+1)If you need to work with a specific date 			|	1)If you want to get the current date and time, 
+  and time, you use the System.DateTime type.		|	  you use the System.DateTime.Now property.
+2)DateTime specificDate = new DateTime(2022, 1, 1); |	2)DateTime currentDateTime = DateTime.Now;
+// January 1, 2022									|
+
+2) What is Globalization and Localization?
+In ASP.NET Core, Globalization and Localization are concepts that deal with adapting applications to different cultures and languages.
+
+1. **Globalization:**
+- **Definition:** 
+Globalization is the process of designing and developing applications that can work with different cultures and regions. 
+It involves making your application aware of cultural differences such as date and time formats, number formats, 
+and text direction.
+
+- **Implementation in ASP.NET Core:** ASP.NET Core provides a mechanism for globalizing applications through the use of the 
+`IStringLocalizer` interface. This interface allows you to retrieve localized strings based on the current culture. 
+You can use resource files or databases to store localized content, 
+and the framework will automatically select the appropriate resource based on the user's culture.
+
+2. **Localization:**
+   - **Definition:** Localization is the process of adapting an application to a specific language and culture. 
+   It involves translating the user interface, messages, and other content into different languages to make the 
+   application accessible and user-friendly for people from various linguistic backgrounds.
+   - **Implementation in ASP.NET Core:** ASP.NET Core supports localization through resource files and the 
+   `IStringLocalizer` interface. Resource files contain key-value pairs where keys represent the original content 
+   in a default language, and values are the translated content for different languages. 
+   The framework handles the selection of the appropriate resource file based on the user's culture.
+
+Here's a basic overview of how you might use localization in ASP.NET Core:
+
+- Create resource files for each supported language.
+- Use the `IStringLocalizer` interface to retrieve localized strings in your application code.
+- Set the application's culture based on user preferences or browser settings.
+
+By implementing globalization and localization, ASP.NET Core applications can provide a more inclusive 
+and user-friendly experience for users around the world, supporting different languages, date formats, 
+and other cultural preferences.
+
+************************************************************************************************************
+
+Q: What are the helpers in ASP.NET Core? and it's types explain with example
+Ans :
+In ASP.NET Core, helpers are utility methods and classes that simplify common tasks in view files (Razor views). 
+They help generate HTML markup and perform various other operations. 
+There are different types of helpers in ASP.NET Core. Here are some common types:
+
+1. **HTML Helpers:**
+   - HTML Helpers simplify the process of generating HTML elements in Razor views.
+   - They are methods that generate HTML markup for standard elements like input controls, links, and form elements.
+
+   Example - Generating a hyperlink:
+   ```csharp
+   @Html.ActionLink("Click me", "ActionName", "ControllerName")
+   ```
+
+2. **Tag Helpers:**
+   - Tag Helpers are a more HTML-centric way of writing server-side code in Razor views.
+   - They use HTML-like syntax to perform server-side operations.
+
+   Example - Form Tag Helper:
+   ```html
+   <form asp-controller="HomeController" asp-action="SubmitForm" method="post">
+       <!-- form content here -->
+   </form>
+   ```
+
+3. **View Components:**
+   - View Components are similar to partial views but are more powerful.
+   - They can include both server-side and client-side code and are used for rendering reusable components.
+
+   Example - Creating a View Component:
+   ```csharp
+   public class MyViewComponent : ViewComponent
+   {
+       public IViewComponentResult Invoke()
+       {
+           // Logic here
+           return View();
+       }
+   }
+   ```
+
+4. **ViewBag and ViewData:**
+   - ViewBag and ViewData are dynamic objects that allow you to pass data from controllers to views.
+   - They are not specific to ASP.NET Core, but they are commonly used to share data between controller actions and views.
+
+   Example - Setting data in controller:
+   ```csharp
+   ViewBag.Message = "Hello, world!";
+   ```
+
+   Example - Retrieving data in a view:
+   ```csharp
+   <p>@ViewBag.Message</p>
+   ```
+
+5. **Url Helpers:**
+   - Url Helpers help generate URLs in a type-safe manner.
+   - They assist in creating links to controller actions.
+
+   Example - Generating a URL in Razor view:
+   ```csharp
+   <a href="@Url.Action("ActionName", "ControllerName")">Click me</a>
+   ```
+
+These are just a few examples of helpers in ASP.NET Core. 
+They are designed to enhance the developer's productivity by providing convenient ways to perform common tasks in Razor views. 
+Depending on your needs, you may choose to use different types of helpers in your ASP.NET Core applications.
+
+Q: All OOPs Concepts? with live exmpale and where you used in the application?
+Q: What is OOPS? (Repeated).
+Q: what is the difference between .net core 3.1 and .net 5
+Q: JWT Token in asp.net core?
+Q: Explain nlog in asp.net core? 
+Q: Expaling Cursours? Triggers? 
+Q: Difference between Union and UnionAll?
+Q: 'n' heagiest salary query?
+-->	with cte as (
+	select top 100 DENSE_RANK() OVER (order by REQSN_NUMBER desc) Salary ,* 
+	from EMPLOYEE_MSTR 
+	where COMPANY_CODE='C019' and DELETE_FLAG='N' order by REQSN_NUMBER desc)
+	Select * from cte where Salary='1'
+
+Q: Aggregate functions with example?
+Q: difference between Order by & Group by clause?
+Q: Expalin Garbage collector?
+
+Q: Generic and Non-generic?
+	Generic: a Collection that is capable of storing specified type of values. 
+	ex: List<int> li = new List<int>();
+		This List cable of storing only integer values. this is of type safe or type independent.
+	--> List is Genric because it can store specific type values,. 
+	why because Add() Method store values of either integer/string/float/dobule/char value as a parameter
+	the one which we mentioned as List<int>.
+
+Q: 	Non-generic
+	A collection that will store any type of values like int, string, double, char, float
+	ArrayList,HashTable, Stack, Queue etc,. hence it is not type-safe or not type independent.
+	ArrayList al = new ArrayList();
+	al.Add(100);	al.Add('C');	al.Add(10.90);	al.Add("Name");
+	
+	--> Arraylist is non-genric because it can store any type of values,. 
+	because Add() Method store values of object value as a parameter.
+
+Q: UNION and JOIN Difference?
+Q: Disadvantages of indexs?
+Q: Difference between class & Struct?
+Q: Can we create an object for abstract class in c#?
+
+Q: Partial Class?
+Ans: In C#, a partial class allows you to split the definition of a class across multiple source files. 
+Each part of the class is defined in a separate file using the partial keyword. 
+When the compiler processes the code, it combines all the parts into a single class.
+The primary use case for partial classes is to allow code generation tools, designers, 
+or developers to extend a class without modifying the generated or hand-written code in other files. 
+This can be particularly useful in scenarios like auto-generated code from designers or tool-generated code 
+that needs manual customization.
+Here's a simple example of a partial class:
+
+File1.cs:
+public partial class Person
+{
+    public string FirstName { get; set; }
+}
+
+File2.cs:
+public partial class Person
+{
+    public string LastName { get; set; }
+}
+
+In this example, Person is a partial class defined in two separate files. 
+The compiler treats these two parts as a single class, allowing you to use Person as if it were defined 
+in a single file:
+
+Usage:
+Person person = new Person();
+person.FirstName = "John";
+person.LastName = "Doe";
+
+Console.WriteLine($"{person.FirstName} {person.LastName}");
+The output will be:
+John Doe
+Remember that the parts of a partial class must be in the same namespace and assembly. 
+Partial classes can be a helpful organizational tool, but it's essential to use them judiciously to maintain code 
+clarity and understandability.
+
+Q: Disadvantages of dynamic key word in asp.net core? (used in Generics)
+Q: Middleware in asp.net core?
+Q: Solid Principals?
+Q: Dependency Injection?
+Q: Explaing HTTP Verbs? 
+	Q: Difference between i) Get/Put ii) Put/Post
+	--> Get
+	--> Post
+	--> Put
+	--> Delete
+	--> Trace
+	--> Options
+	--> Connect
+	--> Patch
+Q: Can we create object for Abstract class?
+
+--****************************************************************************************************
+Q: Explain in depth how to do validation in Web Api?;
+Ans: Validation in ASP.NET Core Web API involves ensuring that incoming requests are validated according to predefined rules 
+	 before further processing. This helps in maintaining data integrity and handling errors gracefully. 
+	 There are several approaches to implementing validation:
+
+1. Model Validation
+ASP.NET Core supports model validation by default, which uses data annotations on your model classes to specify validation rules.
+
+2. Fluent Validation
+Fluent Validation is an alternative to data annotations, providing a more flexible and expressive way to define validation rules.
+
+Example:
+Install the FluentValidation.AspNetCore package:
+dotnet add package FluentValidation.AspNetCore
+
+Define a validator for the Book class:
+Example :
+using FluentValidation;
+
+public class BookValidator : AbstractValidator<Book>
+{
+    public BookValidator()
+    {
+        RuleFor(x => x.Title).NotEmpty().WithMessage("Title is required");
+        RuleFor(x => x.Price).GreaterThan(0).WithMessage("Price must be greater than 0");
+        RuleFor(x => x.Password).Matches(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$")
+                                .WithMessage("Password must have at least 8 characters, one uppercase letter, one lowercase letter, and one digit.");
+    }
+}
+
+Register Validator and Use in Controller:
+using FluentValidation.AspNetCore;
+
+public class Startup
+{
+    public void ConfigureServices(IServiceCollection services)
+    {
+        services.AddControllers()
+                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<BookValidator>());
+    }
+}
+
+3. Custom Validation Logic
+For complex validation scenarios that cannot be handled by data annotations or Fluent Validation, 
+you can implement custom validation logic by implementing the IValidatableObject interface on your model class:
+public class Book : IValidatableObject
+{
+    public int Id { get; set; }
+    public string Title { get; set; }
+    public decimal Price { get; set; }
+    public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+    {
+        var results = new List<ValidationResult>();
+        if (string.IsNullOrEmpty(Title))
+        {
+            results.Add(new ValidationResult("Title is required", new[] { nameof(Title) }));
+        }
+        if (Price <= 0)
+        {
+            results.Add(new ValidationResult("Price must be greater than 0", new[] { nameof(Price) }));
+        }
+        return results;
+    }
+}
+
+Controller Action:
+[ApiController]
+[Route("api/[controller]")]
+public class BooksController : ControllerBase
+{
+    [HttpPost]
+    public IActionResult Post([FromBody] Book book)
+    {
+        var validationResults = new List<ValidationResult>();
+        var isValid = Validator.TryValidateObject(book, new ValidationContext(book), validationResults, true);
+        if (!isValid)
+        {
+            var errors = validationResults.SelectMany(r => r.ErrorMessage);
+            return BadRequest(errors);
+        }
+        // Process valid book object
+        return Ok(book);
+    }
+}
+
+Summary
+Model Validation: Uses data annotations ([Required], [Range], etc.) or Fluent Validation for declarative validation.
+Custom Validation: Implement IValidatableObject for complex validation logic.
+Error Handling: Return appropriate HTTP responses (BadRequest) with detailed error messages when validation fails.
+
+--****************************************************************************************************	
+Q: Difference between Dispose and Finalize?
+Q: Explain Exception Handling?

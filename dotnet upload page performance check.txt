@@ -1,0 +1,126 @@
+Hi, I am Santosh, hailing from Kukanoor in Karnataka. 
+I completed my postgraduate course, Master of Computer Application (MCA), at VTU University, graduating in 2015. 
+I was selected as a Software Trainee at Aliment Software Ltd., where I worked for over 2 years.
+
+During my tenure, I had the opportunity to work on various technologies such as ASP.NET, C#, SQL, and MVC. 
+I also provided support for existing VB.Net applications. 
+Subsequently, in 2018, I joined HGS Company and have been working there for more than 5 years.
+
+At HGS, I have worked on a diverse range of technologies, including ASP.NET, C#, SQL, MVC, and ASP.NET Core. 
+Additionally, I have continued to offer support for existing VB.Net applications. 
+After spending over 5 years with the same company, I am now seeking new challenges and opportunities.
+
+That's a brief overview of my professional journey.
+
+
+******** 1)Difference between System.datetime and System.Datetime.Now in C#?
+System.datetime									|	System.Datetime.Now
+1)If you need to work with a specific date 		|	1)If you want to get the current date and time, 
+  and time, you use the System.DateTime type.	|	  you use the System.DateTime.Now property.
+
+
+2) What is Globalization and Localization?
+In ASP.NET Core, Globalization and Localization are concepts that deal with adapting applications to different cultures and languages.
+
+1. **Globalization:**
+- **Definition:** 
+Globalization is the process of designing and developing applications that can work with different cultures and regions. 
+It involves making your application aware of cultural differences such as date and time formats, number formats, 
+and text direction.
+
+- **Implementation in ASP.NET Core:** ASP.NET Core provides a mechanism for globalizing applications through the use of the 
+`IStringLocalizer` interface. This interface allows you to retrieve localized strings based on the current culture. 
+You can use resource files or databases to store localized content, 
+and the framework will automatically select the appropriate resource based on the user's culture.
+
+2. **Localization:**
+   - **Definition:** Localization is the process of adapting an application to a specific language and culture. It involves translating the user interface, messages, and other content into different languages to make the application accessible and user-friendly for people from various linguistic backgrounds.
+   - **Implementation in ASP.NET Core:** ASP.NET Core supports localization through resource files and the `IStringLocalizer` interface. Resource files contain key-value pairs where keys represent the original content in a default language, and values are the translated content for different languages. The framework handles the selection of the appropriate resource file based on the user's culture.
+
+Here's a basic overview of how you might use localization in ASP.NET Core:
+
+- Create resource files for each supported language.
+- Use the `IStringLocalizer` interface to retrieve localized strings in your application code.
+- Set the application's culture based on user preferences or browser settings.
+
+By implementing globalization and localization, ASP.NET Core applications can provide a more inclusive and user-friendly experience for users around the world, supporting different languages, date formats, and other cultural preferences.
+
+************************************************************************************************************
+
+Q: What are the helpers in ASP.NET Core? and it's types explain with example
+Ans :
+In ASP.NET Core, helpers are utility methods and classes that simplify common tasks in view files (Razor views). 
+They help generate HTML markup and perform various other operations. 
+There are different types of helpers in ASP.NET Core. Here are some common types:
+
+1. **HTML Helpers:**
+   - HTML Helpers simplify the process of generating HTML elements in Razor views.
+   - They are methods that generate HTML markup for standard elements like input controls, links, and form elements.
+
+   Example - Generating a hyperlink:
+   ```csharp
+   @Html.ActionLink("Click me", "ActionName", "ControllerName")
+   ```
+
+2. **Tag Helpers:**
+   - Tag Helpers are a more HTML-centric way of writing server-side code in Razor views.
+   - They use HTML-like syntax to perform server-side operations.
+
+   Example - Form Tag Helper:
+   ```html
+   <form asp-controller="HomeController" asp-action="SubmitForm" method="post">
+       <!-- form content here -->
+   </form>
+   ```
+
+3. **View Components:**
+   - View Components are similar to partial views but are more powerful.
+   - They can include both server-side and client-side code and are used for rendering reusable components.
+
+   Example - Creating a View Component:
+   ```csharp
+   public class MyViewComponent : ViewComponent
+   {
+       public IViewComponentResult Invoke()
+       {
+           // Logic here
+           return View();
+       }
+   }
+   ```
+
+4. **ViewBag and ViewData:**
+   - ViewBag and ViewData are dynamic objects that allow you to pass data from controllers to views.
+   - They are not specific to ASP.NET Core, but they are commonly used to share data between controller actions and views.
+
+   Example - Setting data in controller:
+   ```csharp
+   ViewBag.Message = "Hello, world!";
+   ```
+
+   Example - Retrieving data in a view:
+   ```csharp
+   <p>@ViewBag.Message</p>
+   ```
+
+5. **Url Helpers:**
+   - Url Helpers help generate URLs in a type-safe manner.
+   - They assist in creating links to controller actions.
+
+   Example - Generating a URL in Razor view:
+   ```csharp
+   <a href="@Url.Action("ActionName", "ControllerName")">Click me</a>
+   ```
+
+These are just a few examples of helpers in ASP.NET Core. 
+They are designed to enhance the developer's productivity by providing convenient ways to perform common tasks in Razor views. 
+Depending on your needs, you may choose to use different types of helpers in your ASP.NET Core applications.
+
+Q: All OOPs Concepts? with live exmpale and where you used in the application?
+Q: what is the difference between .net core 3.1 and .net 5
+Q: JWT Token in asp.net core?
+Q: Explain nlog in asp.net core?
+Q: Expaling Cursours? Triggers? 
+Q: Difference between Union and UnionAll?
+Q: 'n' heagiest salary query?
+Q: 
